@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Houston Voter Guide</title>
+  <meta
+    name="description"
+    content="A Houston-focused voter information site with registration help, election dates, district lookup tools, and research sections for Texas, Harris County, and school district races."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <a class="brand" href="#top">Houston Voter Guide</a>
+        <div class="nav-links">
+          <a href="#register">Register</a>
+          <a href="#dates">Dates</a>
+          <a href="#lookup">ZIP Lookup</a>
+          <a href="#races">Races</a>
+          <a href="#schools">Schools</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Houston, Harris County, and Texas elections</p>
+          <h1>Clear voter information for people who want facts, deadlines, and a starting point.</h1>
+          <p class="lede">
+            This starter site is built for Houston-area voters who need to register, check deadlines,
+            find official election tools, and research the offices that shape daily life:
+            U.S. Senate, Congress, judges, county offices, and public school governance.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#lookup">Find where to start</a>
+            <a class="button button-secondary" href="https://www.votetexas.gov/?lang=en" target="_blank" rel="noreferrer">Open VoteTexas.gov</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <p class="panel-label">Right now</p>
+          <ul class="date-list">
+            <li><span>April 4, 2026</span><strong>Houston City Council District C special election</strong></li>
+            <li><span>May 2, 2026</span><strong>Limited uniform election date</strong></li>
+            <li><span>May 26, 2026</span><strong>Texas primary runoff election</strong></li>
+            <li><span>November 3, 2026</span><strong>General election</strong></li>
+          </ul>
+          <p class="panel-note">
+            Dates above are drawn from the Texas Secretary of State and Harris County Elections pages
+            available on March 30, 2026.
+          </p>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="register">
+        <div class="section-heading">
+          <p class="eyebrow">Registration</p>
+          <h2>How to register to vote in Houston</h2>
+          <p>
+            In Texas, voter registration is county-based. For Houston-area voters in Harris County,
+            the safest approach is to use official state and county resources.
+          </p>
+        </div>
+
+        <div class="card-grid three-up">
+          <article class="card">
+            <h3>1. Confirm you are eligible</h3>
+            <p>
+              Texas says you must be a U.S. citizen, live in the county where you register, and be
+              at least 17 years and 10 months old when you submit the application and 18 by Election Day.
+            </p>
+            <a href="https://www.votetexas.gov/register-to-vote/eligibility-for-registration.html?lv=true" target="_blank" rel="noreferrer">Read eligibility rules</a>
+          </article>
+
+          <article class="card">
+            <h3>2. Submit the registration form</h3>
+            <p>
+              Texas requires a signed registration application. You can fill out the official form online,
+              print it, sign it, and mail it, or request a printed application.
+            </p>
+            <a href="https://www.votetexas.gov/register-to-vote/index" target="_blank" rel="noreferrer">Start the official application</a>
+          </article>
+
+          <article class="card">
+            <h3>3. Track your status</h3>
+            <p>
+              After you apply, check your registration through the Secretary of State voter portal and
+              look for your voter registration certificate in the mail.
+            </p>
+            <a href="https://teamrv-mvp.sos.texas.gov/MVP/mvp.do" target="_blank" rel="noreferrer">Open My Voter Portal</a>
+          </article>
+        </div>
+
+        <div class="info-banner">
+          <strong>Important:</strong> Texas generally requires registration at least 30 days before Election Day.
+          Because mail timing can matter, this site should encourage users to submit forms as early as possible.
+        </div>
+      </section>
+
+      <section class="section section-accent" id="lookup">
+        <div class="section-heading">
+          <p class="eyebrow">ZIP Lookup</p>
+          <h2>Enter a Houston-area postal code for a practical starting point</h2>
+          <p>
+            ZIP codes are useful for finding nearby election offices, but they are not precise enough to
+            determine an exact ballot. Use this tool to find a nearby Harris County Elections office and then
+            verify your exact districts with the official voter portal.
+          </p>
+        </div>
+
+        <div class="lookup-shell">
+          <form class="lookup-form" id="zip-form">
+            <label for="zip-input">Houston ZIP / postal code</label>
+            <div class="lookup-controls">
+              <input id="zip-input" name="zip" type="text" inputmode="numeric" maxlength="5" placeholder="77002" aria-describedby="zip-help">
+              <button type="submit" class="button button-primary">Find resources</button>
+            </div>
+            <p id="zip-help" class="form-note">
+              Try a Harris County ZIP such as 77002, 77019, 77055, 77084, 77091, or 77506.
+            </p>
+          </form>
+
+          <div class="lookup-result" id="lookup-result" aria-live="polite">
+            <p class="result-placeholder">Your result will appear here with nearby offices, district tools, and school-governance notes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="dates">
+        <div class="section-heading">
+          <p class="eyebrow">Election Calendar</p>
+          <h2>2026 dates Houston voters are likely to care about</h2>
+          <p>
+            These are the main dates visible in the official state and county resources as of March 30, 2026.
+            Before publishing, recheck them against the linked source pages.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <p class="timeline-date">April 4, 2026</p>
+            <h3>City of Houston Council District C special election</h3>
+            <p>Harris County Elections lists this as an active special election with polling information and deadlines.</p>
+          </article>
+          <article class="timeline-card">
+            <p class="timeline-date">April 20, 2026</p>
+            <h3>First day of early voting for the May 2 limited uniform election</h3>
+            <p>The state calendar lists April 20 as both the first day of early voting and the last day to apply for a mail ballot for that election.</p>
+          </article>
+          <article class="timeline-card">
+            <p class="timeline-date">May 2, 2026</p>
+            <h3>Limited uniform election date</h3>
+            <p>This can include local subdivision races and measures, depending on where a voter lives.</p>
+          </article>
+          <article class="timeline-card">
+            <p class="timeline-date">May 18 to May 22, 2026</p>
+            <h3>Early voting for the Texas primary runoff</h3>
+            <p>The Secretary of State calendar lists these as the early voting dates for the May 26, 2026 primary runoff.</p>
+          </article>
+          <article class="timeline-card">
+            <p class="timeline-date">May 26, 2026</p>
+            <h3>Texas primary runoff election</h3>
+            <p>Runoff contests are determined by what happened in the March 3, 2026 primary and can vary by district.</p>
+          </article>
+          <article class="timeline-card">
+            <p class="timeline-date">November 3, 2026</p>
+            <h3>General election</h3>
+            <p>The statewide general election date listed by the Texas Secretary of State for federal, state, district, county, and many local races.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="races">
+        <div class="section-heading">
+          <p class="eyebrow">Candidate Research</p>
+          <h2>What to cover for Texas, Harris County, and judicial races</h2>
+          <p>
+            Candidate rosters change over time. This section is designed as a publishing framework so you can
+            add profiles once official candidate lists and sample ballots are available for each election.
+          </p>
+        </div>
+
+        <div class="card-grid two-up">
+          <article class="card editorial-card">
+            <h3>U.S. Senate in Texas</h3>
+            <p class="card-kicker">Suggested profile fields</p>
+            <ul>
+              <li>Candidate name, party, and campaign website</li>
+              <li>Top issues: voting rights, immigration, education, health care, housing, climate, infrastructure</li>
+              <li>Houston-area relevance: port, flood control, transit, disaster funding, schools</li>
+              <li>Public statements, debates, endorsements, and fundraising snapshots</li>
+            </ul>
+          </article>
+          <article class="card editorial-card">
+            <h3>Congressional districts serving Houston</h3>
+            <p class="card-kicker">Suggested profile fields</p>
+            <ul>
+              <li>District number and who lives there</li>
+              <li>Incumbent or open seat status</li>
+              <li>Candidate contrast on local priorities</li>
+              <li>Official ballot lookup link for exact district confirmation</li>
+            </ul>
+          </article>
+          <article class="card editorial-card">
+            <h3>Judges and courts</h3>
+            <p class="card-kicker">Suggested profile fields</p>
+            <ul>
+              <li>Texas Supreme Court, Court of Criminal Appeals, and appellate contests</li>
+              <li>Harris County judicial races when they appear on the ballot</li>
+              <li>Professional background, endorsements, and bar ratings if available</li>
+              <li>Plain-language explanation of what each court actually does</li>
+            </ul>
+          </article>
+          <article class="card editorial-card">
+            <h3>County and local offices</h3>
+            <p class="card-kicker">Suggested profile fields</p>
+            <ul>
+              <li>Commissioners Court, sheriff, district attorney, clerk, tax assessor-collector, and bond or charter measures</li>
+              <li>Which offices directly affect public safety, roads, elections, housing, and county services</li>
+              <li>How to compare candidates using public records and debate coverage</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="resource-strip">
+          <a href="https://teamrv-mvp.sos.texas.gov/MVP/mvp.do" target="_blank" rel="noreferrer">Check registration and districts</a>
+          <a href="https://app.harrisvotes.com/PollLocations/VoterSearch?lang=en-US" target="_blank" rel="noreferrer">Find sample ballot in Harris County</a>
+          <a href="https://www.sos.texas.gov/elections/laws/current-elections-information.shtml" target="_blank" rel="noreferrer">Current statewide election information</a>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="districts">
+        <div class="section-heading">
+          <p class="eyebrow">Districts</p>
+          <h2>How to explain districts without misleading people</h2>
+          <p>
+            Congressional, legislative, judicial, and school board districts are based on a voter's full residential address,
+            not just their ZIP code. A good Houston voter site should say that clearly.
+          </p>
+        </div>
+
+        <div class="card-grid three-up">
+          <article class="card dark-card">
+            <h3>Use ZIP for orientation</h3>
+            <p>Helpful for neighborhood-level context, nearby election offices, and which school systems or cities a voter might be in.</p>
+          </article>
+          <article class="card dark-card">
+            <h3>Use the voter portal for exact districts</h3>
+            <p>The official Texas voter portal is the best source for exact district and registration details tied to a person's address.</p>
+          </article>
+          <article class="card dark-card">
+            <h3>Use the sample ballot for real contests</h3>
+            <p>The Harris County ballot lookup shows what is actually on a voter's ballot when an election is active.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="schools">
+        <div class="section-heading">
+          <p class="eyebrow">Public School Governance</p>
+          <h2>School board races matter, but superintendent races usually do not exist on the ballot</h2>
+          <p>
+            For most Texas public school systems, voters elect board members or trustees, and the board hires the superintendent.
+            That means your site should usually track school board and trustee contests, not "superintendent candidates."
+          </p>
+        </div>
+
+        <div class="card-grid two-up">
+          <article class="card">
+            <h3>Houston ISD requires a special note</h3>
+            <p>
+              HISD is under a Texas Education Agency intervention. Official HISD and TEA pages say elected trustees had their
+              governance responsibilities suspended in 2023, and TEA announced in June 2025 that the appointed board of managers
+              would continue through June 1, 2027.
+            </p>
+            <a href="https://tea.texas.gov/about-tea/news-and-multimedia/news-releases/news-2025/tea-announces-extension-of-houston-isd-intervention-and-new-appointments-to-houston-isd-board-of-managers" target="_blank" rel="noreferrer">Read the TEA update</a>
+          </article>
+          <article class="card">
+            <h3>For other school districts</h3>
+            <p>
+              Add profiles for trustee or board positions, district maps, current board members, and links to each district's
+              election page. Good comparisons include curriculum, budget, school safety, special education, and transparency.
+            </p>
+            <a href="https://www.houstonisd.org/school-board/elections" target="_blank" rel="noreferrer">Example district elections page</a>
+          </article>
+        </div>
+
+        <div class="school-checklist">
+          <h3>Recommended school district coverage for a Houston version</h3>
+          <div class="checklist-grid">
+            <div>
+              <p class="checklist-label">Districts to consider</p>
+              <ul>
+                <li>Houston ISD</li>
+                <li>Alief ISD</li>
+                <li>Aldine ISD</li>
+                <li>Cypress-Fairbanks ISD</li>
+                <li>Fort Bend ISD</li>
+                <li>Katy ISD</li>
+                <li>Pasadena ISD</li>
+                <li>Spring Branch ISD</li>
+              </ul>
+            </div>
+            <div>
+              <p class="checklist-label">What each district page should include</p>
+              <ul>
+                <li>Board seats on the ballot</li>
+                <li>Candidate questionnaire or policy positions</li>
+                <li>District map and seat boundaries</li>
+                <li>Meeting agendas and board minutes</li>
+                <li>Budget, bond, and accountability context</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-source">
+        <div class="section-heading">
+          <p class="eyebrow">Sources</p>
+          <h2>Official links used for this starter site</h2>
+        </div>
+
+        <div class="sources-grid">
+          <a href="https://www.votetexas.gov/register-to-vote/index" target="_blank" rel="noreferrer">VoteTexas registration</a>
+          <a href="https://www.votetexas.gov/register-to-vote/update-voter-registration.html" target="_blank" rel="noreferrer">VoteTexas registration updates</a>
+          <a href="https://www.sos.texas.gov/elections/voter/important-election-dates.shtml" target="_blank" rel="noreferrer">Texas important election dates</a>
+          <a href="https://www.harrisvotes.com/" target="_blank" rel="noreferrer">Harris County Elections</a>
+          <a href="https://www.harrisvotes.com/Contact-Us/lang/en-US" target="_blank" rel="noreferrer">Harris County branch offices</a>
+          <a href="https://app.harrisvotes.com/PollLocations/VoterSearch?lang=en-US" target="_blank" rel="noreferrer">Harris County voter search and sample ballot</a>
+          <a href="https://www.houstonisd.org/school-board" target="_blank" rel="noreferrer">Houston ISD school board</a>
+          <a href="https://tea.texas.gov/texas-schools/school-boards/school-governance/board-of-managers" target="_blank" rel="noreferrer">TEA board of managers information</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
