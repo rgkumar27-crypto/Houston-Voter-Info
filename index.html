@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Houston Voter Guide</title>
+  <meta
+    name="description"
+    content="A Houston-focused voter information site with registration help, election dates, district lookup tools, and research sections for Texas, Harris County, and school district races."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <a class="brand" href="#top">Houston Voter Guide</a>
+        <div class="nav-links">
+          <a href="#register">Register</a>
+          <a href="#dates">Dates</a>
+          <a href="#lookup">ZIP Lookup</a>
+          <a href="#races">Races</a>
+          <a href="#schools">Schools</a>
+        </div>
+      </nav>
+
+      <section class="hero-grid" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Houston, Harris County, and Texas elections</p>
+          <h1>Clear voter information for people who want facts, deadlines, and a starting point.</h1>
+          <p class="lede">
+            This starter site is built for Houston-area voters who need to register, check deadlines,
+            find official election tools, and research the offices that shape daily life:
+            U.S. Senate, Congress, judges, county offices, and public school governance.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#lookup">Find where to start</a>
+            <a class="button button-secondary" href="https://www.votetexas.gov/?lang=en" target="_blank" rel="noreferrer">Open VoteTexas.gov</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <p class="panel-label">Right now</p>
+          <ul class="date-list">
+            <li><span>April 4, 2026</span><strong>Houston City Council District C special election</strong></li>
+            <li><span>May 2, 2026</span><strong>Limited uniform election date</strong></li>
+            <li><span>May 26, 2026</span><strong>Texas primary runoff election</strong></li>
+            <li><span>November 3, 2026</span><strong>General election</strong></li>
+          </ul>
+          <p class="panel-note">
+            Dates above are drawn from the Texas Secretary of State and Harris County Elections pages
+            available on March 30, 2026.
+          </p>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="register">
+        <div class="section-heading">
+          <p class="eyebrow">Registration</p>
+          <h2>How to register to vote in Houston</h2>
+          <p>
+            In Texas, voter registration is county-based. For Houston-area voters in Harris County,
+            the safest approach is to use official state and county resources.
+          </p>
+        </div>
+
+        <div class="card-grid three-up">
+          <article class="card">
+            <h3>1. Confirm you are eligible</h3>
+            <p>
+              Texas says you must be a U.S. citizen, live in the county where you register, and be
+              at least 17 years and 10 months old when you submit the application and 18 by Election Day.
+            </p>
+            <a href="https://www.votetexas.gov/register-to-vote/eligibility-for-registration.html?lv=true" target="_blank" rel="noreferrer">Read eligibility rules</a>
+          </article>
+
+          <article class="card">
+            <h3>2. Submit the registration form</h3>
+            <p>
+              Texas requires a signed registration application. You can fill out the official form online,
+              print it, sign it, and mail it, or request a printed application.
+            </p>
+            <a href="https://www.votetexas.gov/register-to-vote/index" target="_blank" rel="noreferrer">Start the official application</a>
+          </article>
+
+          <article class="card">
+            <h3>3. Track your status</h3>
+            <p>
+              After you apply, check your registration through the Secretary of State voter portal and
+              look for your voter registration certificate in the mail.
+            </p>
+            <a href="https://teamrv-mvp.sos.texas.gov/MVP/mvp.do" target="_blank" rel="noreferrer">Open My Voter Portal</a>
+          </article>
+        </div>
+
+        <div class="info-banner">
+          <strong>Important:</strong> Texas generally requires registration at least 30 days before Election Day.
+          Because mail timing can matter, this site should encourage users to submit forms as early as possible.
+        </div>
+      </section>
+
+      <section class="section section-accent" id="lookup">
+        <div class="section-heading">
+          <p class="eyebrow">ZIP Lookup</p>
+          <h2>Enter a Houston-area postal code for a practical starting point</h2>
+          <p>
+            ZIP codes are useful for finding nearby election offices, but they are not precise enough to
+            determine an exact ballot. Use this tool to find a nearby Harris County Elections office and then
+            verify your exact districts with the official voter portal.
+          </p>
+        </div>
+
+        <div class="lookup-shell">
+          <form class="lookup-form" id="zip-form">
+            <label for="zip-input">Houston ZIP / postal code</label>
+            <div class="lookup-controls">
+              <input id="zip-input" name="zip" type="text" inputmode="numeric" maxlength="5" placeholder="77002" aria-describedby="zip-help">
+              <button type="submit" class="button button-primary">Find resources</button>
+            </div>
+            <p id="zip-help" class="form-note">
+              Try a Harris County ZIP such as 77002, 77019, 77055, 77084, 77091, or 77506.
+            </p>
+          </form>
+
+          <div class="lookup-result" id="lookup-result" aria-live="polite">
+            <p class="result-placeholder">Your result will appear here with nearby offices, district tools, and school-governance notes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="dates">
+        <div class="section-heading">
+          <p class="eyebrow">Election Calendar</p>
+          <h2>2026 dates Houston voters are likely to care about</h2>
+          <p>
+            These are the main dates visible in the official state and county resources as of March 30, 2026.
+            Before publishing, recheck them against the linked source pages.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-card">
+            <p class="timeline-date">April 4, 2026</p>
+            <h3>City of Houston Council District C special election</h3>
+            <p>Harris County Elections lists this as an active special election with polling information and deadlines.</p>
+          </article>
+          <article class="timeline-card">
+            <p class="timeline-date">April 20, 2026</p>
+            <h3>First day of early voting for the May 2 limited uniform election</h3>
+            <p>The state calendar lists April 20 as both the first day of early voting and the last day to apply for a mail ballot for that election.</p>
+          </article>
+          <article class="timeline-card">
+            <p class="timeline-date">May 2, 2026</p>
+            <h3>Limited uniform election date</h3>
+            <p>This can include local subdivision races and measures, depending on where a voter lives.</p>
+          </article>
+          <article class="timeline-card">
+            <p class="timeline-date">May 18 to May 22, 2026</p>
+            <h3>Early voting for the Texas primary runoff</h3>
+            <p>The Secretary of State calendar lists these as the early voting dates for the May 26, 2026 primary runoff.</p>
+          </article>
+          <article class="timeline-card">
+            <p class="timeline-date">May 26, 2026</p>
+            <h3>Texas primary runoff election</h3>
+            <p>Runoff contests are determined by what happened in the March 3, 2026 primary and can vary by district.</p>
+          </article>
+          <article class="timeline-card">
+            <p class="timeline-date">November 3, 2026</p>
+            <h3>General election</h3>
+            <p>The statewide general election date listed by the Texas Secretary of State for federal, state, district, county, and many local races.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="races">
+        <div class="section-heading">
+          <p class="eyebrow">Candidate Research</p>
+          <h2>Current 2026 candidate field for Texas, Harris County, and judicial races</h2>
+          <p>
+            This section reflects the current field visible in official primary and election records as of March 30, 2026.
+            Some races already have nominees, while others are still headed to the May 26, 2026 primary runoff.
+          </p>
+        </div>
+
+        <div class="card-grid two-up">
+          <article class="card editorial-card">
+            <h3>U.S. Senate in Texas</h3>
+            <p class="card-kicker">Status as of March 30, 2026</p>
+            <ul>
+              <li>Democratic nominee: James Talarico. Campaign: <a href="https://jamestalarico.com/" target="_blank" rel="noreferrer">jamestalarico.com</a></li>
+              <li>Republican runoff: John Cornyn. Campaign: <a href="https://www.johncornyn.com/" target="_blank" rel="noreferrer">johncornyn.com</a></li>
+              <li>Republican runoff: Ken Paxton. Campaign: <a href="https://www.kenpaxton.com/" target="_blank" rel="noreferrer">kenpaxton.com</a></li>
+              <li>The Republican nominee will be decided in the May 26 runoff, then face Talarico in the November 3 general election.</li>
+            </ul>
+          </article>
+          <article class="card editorial-card">
+            <h3>Congressional districts serving Houston</h3>
+            <p class="card-kicker">Houston-area field so far</p>
+            <ul>
+              <li>TX-07: Democratic nominee Lizzie Fletcher, campaign <a href="https://www.lizziefletcher.com/" target="_blank" rel="noreferrer">lizziefletcher.com</a>. Republican runoff: Alexander Hale, campaign <a href="https://www.halefortexas.com/" target="_blank" rel="noreferrer">halefortexas.com</a>, versus Tina Cohen.</li>
+              <li>TX-08: Democratic nominee Laura Jones, campaign <a href="https://www.laura4tx.com/" target="_blank" rel="noreferrer">laura4tx.com</a>. Republican nominee Jessica Hart Steinmann, campaign <a href="https://www.jessicasteinmann.com/" target="_blank" rel="noreferrer">jessicasteinmann.com</a>.</li>
+              <li>TX-09: Democratic nominee Leticia Gutierrez, campaign <a href="https://www.leticiaforcongress.com/" target="_blank" rel="noreferrer">leticiaforcongress.com</a>. Republican runoff: Alex Mealer, campaign <a href="https://alexandramealer.com/" target="_blank" rel="noreferrer">alexandramealer.com</a>, versus Briscoe Cain.</li>
+              <li>TX-18: Democratic runoff between Christian Menefee, campaign <a href="https://christianmenefee.com/" target="_blank" rel="noreferrer">christianmenefee.com</a>, and Al Green. Republican nominee: Ronald Dwayne Whitfield.</li>
+              <li>TX-22: Democratic nominee Marquette Greene-Scott. Republican nominee Trever Nehls, campaign <a href="https://www.trevernehlsforcongress.com/" target="_blank" rel="noreferrer">trevernehlsforcongress.com</a>.</li>
+              <li>TX-29: Democratic nominee Sylvia Garcia, campaign <a href="https://www.sylviaforcongress.com/" target="_blank" rel="noreferrer">sylviaforcongress.com</a>. Republican nominee Martha Fierro, campaign <a href="https://www.fierrofortexas.com/" target="_blank" rel="noreferrer">fierrofortexas.com</a>.</li>
+              <li>TX-36: Democratic nominee Rhonda Hart. Republican nominee Brian Babin.</li>
+              <li>TX-38: Democratic nominee Melissa McDonough, campaign <a href="https://melissaforcongress.com/" target="_blank" rel="noreferrer">melissaforcongress.com</a>. Republican runoff: Jon Bonck, campaign <a href="https://www.jonbonck.com/" target="_blank" rel="noreferrer">jonbonck.com</a>, versus Shelly deZevallos.</li>
+            </ul>
+          </article>
+          <article class="card editorial-card">
+            <h3>Judges and courts</h3>
+            <p class="card-kicker">Statewide judicial races on the 2026 ballot</p>
+            <ul>
+              <li>Chief Justice, Texas Supreme Court: Democratic nominee Maggie Ellis, campaign <a href="https://maggieforjustice.com/" target="_blank" rel="noreferrer">maggieforjustice.com</a>, versus Republican nominee Jimmy Blacklock, campaign <a href="https://www.jimmyblacklock.com/" target="_blank" rel="noreferrer">jimmyblacklock.com</a>.</li>
+              <li>Supreme Court Place 2: Democratic nominee Chari Kelly, campaign <a href="https://charikelly.com/" target="_blank" rel="noreferrer">charikelly.com</a>, versus Republican nominee James Sullivan, campaign <a href="https://judgesully.com/" target="_blank" rel="noreferrer">judgesully.com</a>.</li>
+              <li>Supreme Court Place 7: Democratic nominee Kristen Hawkins, campaign <a href="https://judgehawkins.com/" target="_blank" rel="noreferrer">judgehawkins.com</a>, versus Republican nominee Kyle Hawkins, campaign <a href="https://justicekylehawkins.com/" target="_blank" rel="noreferrer">justicekylehawkins.com</a>.</li>
+              <li>Supreme Court Place 8: Democratic nominee Gisela D. Triana, campaign <a href="https://justicetriana.com/" target="_blank" rel="noreferrer">justicetriana.com</a>, versus Republican nominee Brett Busby, campaign <a href="https://brettbusby.com/" target="_blank" rel="noreferrer">brettbusby.com</a>.</li>
+              <li>Court of Criminal Appeals Place 3: Democratic nominee Okey Anyiam versus Republican runoff between Alison Fox, campaign <a href="https://foxforjudge.com/" target="_blank" rel="noreferrer">foxforjudge.com</a>, and Thomas Smith, campaign <a href="https://smithfortexas.org/" target="_blank" rel="noreferrer">smithfortexas.org</a>.</li>
+              <li>Court of Criminal Appeals Place 4: Democratic nominee Audra Riley, campaign <a href="https://judgeaudrariley.com/" target="_blank" rel="noreferrer">judgeaudrariley.com</a>, versus Republican nominee Kevin Patrick Yeary, campaign <a href="https://judgeyeary.com/" target="_blank" rel="noreferrer">judgeyeary.com</a>.</li>
+              <li>Court of Criminal Appeals Place 9: Democratic nominee Holly Taylor, campaign <a href="https://hollytforjudge.com/" target="_blank" rel="noreferrer">hollytforjudge.com</a>, versus Republican nominee John Messinger, campaign <a href="https://messingerforjustice.com/" target="_blank" rel="noreferrer">messingerforjustice.com</a>.</li>
+              <li>Harris County also has a long judicial ballot. Voters should use the official Harris County ballot lookup tied to their address for exact county court and district court races.</li>
+            </ul>
+          </article>
+          <article class="card editorial-card">
+            <h3>County and local offices</h3>
+            <p class="card-kicker">Major Harris County races so far</p>
+            <ul>
+              <li>Harris County Judge: Democratic runoff between Annise Parker, campaign <a href="https://www.anniseparker.com/" target="_blank" rel="noreferrer">anniseparker.com</a>, and Letitia Plummer, campaign <a href="https://www.drletitiaplummer.com/" target="_blank" rel="noreferrer">drletitiaplummer.com</a>.</li>
+              <li>Harris County Judge: Republican runoff between Orlando Sanchez and Marty Lancton.</li>
+              <li>District Attorney: Democratic nominee Sean Teare, campaign <a href="https://seanteareforda.com/" target="_blank" rel="noreferrer">seanteareforda.com</a>, versus Republican nominee Dan Simons, campaign <a href="https://danforda.com/" target="_blank" rel="noreferrer">danforda.com</a>.</li>
+              <li>County Clerk: Democratic nominee Teneshia Hudspeth, campaign <a href="https://www.teneshiahudspeth.com/" target="_blank" rel="noreferrer">teneshiahudspeth.com</a>, versus Republican runoff candidate Mike Wolfe, campaign <a href="https://mikewolfe.com/" target="_blank" rel="noreferrer">mikewolfe.com</a>. The other Republican candidate is Lynda Sanchez.</li>
+              <li>District Clerk: Republican nominee Chris Daniel. The Democratic side is headed to a runoff between Darrell Jordan Jr. and Jose "Alex" Maldonado.</li>
+              <li>This guide should be updated again after the May 26 runoff to show the final November general-election field.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="info-banner">
+          <strong>Publishing note:</strong> This is the current field so far, not the final November ballot. Any race marked as a runoff is still unresolved as of March 30, 2026.
+        </div>
+
+        <div class="resource-strip">
+          <a href="https://teamrv-mvp.sos.texas.gov/MVP/mvp.do" target="_blank" rel="noreferrer">Check registration and districts</a>
+          <a href="https://app.harrisvotes.com/PollLocations/VoterSearch?lang=en-US" target="_blank" rel="noreferrer">Find sample ballot in Harris County</a>
+          <a href="https://www.sos.texas.gov/elections/laws/current-elections-information.shtml" target="_blank" rel="noreferrer">Current statewide election information</a>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="districts">
+        <div class="section-heading">
+          <p class="eyebrow">Districts</p>
+          <h2>How to explain districts without misleading people</h2>
+          <p>
+            Congressional, legislative, judicial, and school board districts are based on a voter's full residential address,
+            not just their ZIP code. A good Houston voter site should say that clearly.
+          </p>
+        </div>
+
+        <div class="card-grid three-up">
+          <article class="card dark-card">
+            <h3>Use ZIP for orientation</h3>
+            <p>Helpful for neighborhood-level context, nearby election offices, and which school systems or cities a voter might be in.</p>
+          </article>
+          <article class="card dark-card">
+            <h3>Use the voter portal for exact districts</h3>
+            <p>The official Texas voter portal is the best source for exact district and registration details tied to a person's address.</p>
+          </article>
+          <article class="card dark-card">
+            <h3>Use the sample ballot for real contests</h3>
+            <p>The Harris County ballot lookup shows what is actually on a voter's ballot when an election is active.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="schools">
+        <div class="section-heading">
+          <p class="eyebrow">Public School Governance</p>
+          <h2>School board races matter, but superintendent races usually do not exist on the ballot</h2>
+          <p>
+            For most Texas public school systems, voters elect board members or trustees, and the board hires the superintendent.
+            That means your site should usually track school board and trustee contests, not "superintendent candidates."
+          </p>
+        </div>
+
+        <div class="card-grid two-up">
+          <article class="card">
+            <h3>Houston ISD requires a special note</h3>
+            <p>
+              HISD is under a Texas Education Agency intervention. Official HISD and TEA pages say elected trustees had their
+              governance responsibilities suspended in 2023, and TEA announced in June 2025 that the appointed board of managers
+              would continue through June 1, 2027.
+            </p>
+            <a href="https://tea.texas.gov/about-tea/news-and-multimedia/news-releases/news-2025/tea-announces-extension-of-houston-isd-intervention-and-new-appointments-to-houston-isd-board-of-managers" target="_blank" rel="noreferrer">Read the TEA update</a>
+          </article>
+          <article class="card">
+            <h3>For other school districts</h3>
+            <p>
+              Most November 2026 school board candidate filing periods are not complete yet as of March 30, 2026, so many district
+              candidate lists are not final. The best current approach is to send voters to official district election pages and
+              update this site once candidate filing closes.
+            </p>
+            <a href="https://www.houstonisd.org/school-board/elections" target="_blank" rel="noreferrer">Houston ISD elections page</a>
+          </article>
+        </div>
+
+        <div class="school-checklist">
+          <h3>Recommended school district coverage for a Houston version</h3>
+          <div class="checklist-grid">
+            <div>
+              <p class="checklist-label">Districts to consider</p>
+              <ul>
+                <li><a href="https://www.houstonisd.org/school-board/elections" target="_blank" rel="noreferrer">Houston ISD</a></li>
+                <li><a href="https://www.aliefisd.net/domain/1184" target="_blank" rel="noreferrer">Alief ISD</a></li>
+                <li><a href="https://www.aldineisd.org/about/board-of-trustees/" target="_blank" rel="noreferrer">Aldine ISD</a></li>
+                <li><a href="https://www.cfisd.net/Page/1957" target="_blank" rel="noreferrer">Cypress-Fairbanks ISD</a></li>
+                <li><a href="https://www.fortbendisd.com/boardelections" target="_blank" rel="noreferrer">Fort Bend ISD</a></li>
+                <li><a href="https://www.katyisd.org/about/board/elections" target="_blank" rel="noreferrer">Katy ISD</a></li>
+                <li><a href="https://www1.pasadenaisd.org/departments/communications/elections" target="_blank" rel="noreferrer">Pasadena ISD</a></li>
+                <li><a href="https://www.springbranchisd.com/about/board-of-trustees/elections" target="_blank" rel="noreferrer">Spring Branch ISD</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="checklist-label">What each district page should include</p>
+              <ul>
+                <li>Board seats on the ballot once filing closes</li>
+                <li>Candidate questionnaire or campaign positions</li>
+                <li>District map and seat boundaries</li>
+                <li>Meeting agendas and board minutes</li>
+                <li>Budget, bond, and accountability context</li>
+                <li>A note that superintendents are usually hired by the board, not elected by voters</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-source">
+        <div class="section-heading">
+          <p class="eyebrow">Sources</p>
+          <h2>Official links used for this starter site</h2>
+        </div>
+
+        <div class="sources-grid">
+          <a href="https://www.votetexas.gov/register-to-vote/index" target="_blank" rel="noreferrer">VoteTexas registration</a>
+          <a href="https://www.votetexas.gov/register-to-vote/update-voter-registration.html" target="_blank" rel="noreferrer">VoteTexas registration updates</a>
+          <a href="https://www.sos.texas.gov/elections/voter/important-election-dates.shtml" target="_blank" rel="noreferrer">Texas important election dates</a>
+          <a href="https://www.harrisvotes.com/" target="_blank" rel="noreferrer">Harris County Elections</a>
+          <a href="https://www.harrisvotes.com/Contact-Us/lang/en-US" target="_blank" rel="noreferrer">Harris County branch offices</a>
+          <a href="https://app.harrisvotes.com/PollLocations/VoterSearch?lang=en-US" target="_blank" rel="noreferrer">Harris County voter search and sample ballot</a>
+          <a href="https://www.houstonisd.org/school-board" target="_blank" rel="noreferrer">Houston ISD school board</a>
+          <a href="https://tea.texas.gov/texas-schools/school-boards/school-governance/board-of-managers" target="_blank" rel="noreferrer">TEA board of managers information</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
